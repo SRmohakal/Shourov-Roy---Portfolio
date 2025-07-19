@@ -1,0 +1,157 @@
+
+<!-- saved from url=(0034)http://127.0.0.1:5500/shourov.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</head><body>
+
+
+ --&gt;
+
+
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shourov Roy - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Shourov Roy - Portfolio_files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./Shourov Roy - Portfolio_files/style.css">
+
+
+    <header>
+        <img src="./Shourov Roy - Portfolio_files/Sk Roy.jpg" alt="Shourov Roy">
+        <h1>Shourov Roy</h1>
+        <p>Competitive Programmer | Aspiring ML Engineer</p>
+    </header>
+
+    <div class="section">
+        <h2>About Me</h2>
+        <p>I am a student of Computer Science and Engineering. I love coding, learning new technologies, and solving real-world problems. I enjoy working with languages like C++, Python, Java, and Go.</p>
+        <p>Currently learning: Machine Learning, Web Development, and Databases.</p>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        <ul>
+            <li>SSC - GPA 5.00 - Chirirbandar Govt. Model Pilot High School</li>
+            <li>HSC - GPA 5.00 - Dinajpur Govt College</li>
+            <li>BSc in CSE (3rd Year) - Shahjalal University of Science &amp; Technology</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <ul>
+            <ul>
+                <li>C++, Python, Java, Go</li>
+                <li>Data Structures and Algorithms</li>
+                <li>Data Analysis &amp; Problem Solving</li>
+                <li>Data Analysis</li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <strong>Codeforces Solutions:</strong> <a href="https://codeforces.com/profile/royShourov" target="_blank">Codeforces</a>
+        </div>
+
+        <div class="project">
+            <strong>GitHub Portfolio:</strong> <a href="https://github.com/SRmohakal" target="_blank">GitHub</a>
+        </div>
+
+        <div class="project">
+            <strong>LeetCode Submissions:</strong> <a href="https://leetcode.com/u/TestCaseFail/" target="_blank">LeetCode</a>
+        </div>
+
+        <div class="project">
+            <strong>Beecrowd Submissions:</strong> <a href="https://judge.beecrowd.com/en/profile/893956" target="_blank">Beecrowd</a>
+        </div>
+
+        <div class="project">
+            <strong>CodeChef Submissions:</strong> <a href="https://www.codechef.com/users/mohakal143" target="_blank">CodeChef</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Experience &amp; Roles</h2>
+        <ul>
+            <li>Organizing Secretary - Sanatan Vidyarthi Samsad, SUST</li>
+            <li>Volunteer - Ghuddi Foundation</li>
+            <li>General Member - CSE Society, SUST</li>
+            <li>General Member - SUST Science Arena</li>
+            <li>Qualified Scholar &amp; Practitioner - Bhagavat Gita Course</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Address</h2>
+        <p>Shourov Roy<br>Shahjalal University of Science and Technology<br>Sylhet, Bangladesh</p>
+    </div>
+
+    <div class="section">
+        <h2>Download My Resume</h2>
+        <a class="resume-btn" href="http://127.0.0.1:5500/Shourov_Roy_Resume.pdf" download="">Download PDF</a>
+    </div>
+
+    <div class="section">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required="">
+            <input type="text" name="email" placeholder="Your Email" required="">
+            <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="social-icons" style="text-align: center;">
+        <h2>Find Me On</h2>
+        <a href="https://github.com/SRmohakal" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/shourovroy/" target="_blank">LinkedIn</a>
+        <a href="https://x.com/cseShourov" target="_blank">X</a>
+        <a href="https://www.facebook.com/shourov.roy.599081" target="_blank">Facebook</a>
+    </div>
+
+    <footer>
+        <p>© 2025 Shourov Roy. All rights reserved.</p>
+    </footer>
+<!-- Code injected--></body></html>
